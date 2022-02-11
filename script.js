@@ -6,7 +6,6 @@ function buttonClick (color){
 }
 
 function clique () {
-    document.getElementById("button");
     bg = document.getElementById("corpo").style.backgroundColor = "black";
     bC;
 }
