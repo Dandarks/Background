@@ -17,7 +17,7 @@ function randomColor () {
     document.getElementById("corpo").style.backgroundColor = "#" + random;
     c = document.getElementById("color").innerHTML = "#" + random;
     document.getElementById("randomColor").style.display = "block";
-    document.getElementById("randomColor").innerText = c;
+    document.getElementById("randomColor").innerText = c.toUpperCase();
     bC;
 }
 
