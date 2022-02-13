@@ -1,23 +1,36 @@
 var bC = document.getElementById("corpo").style.transition = "background-color 1.0s";
 
 function buttonClick (color){
-    bg = document.getElementById("corpo").style.backgroundColor = color;
+    document.getElementById("corpo").style.backgroundColor = color;
+    document.getElementById("randomColor").style.display = "none";
     bC;
 }
 
 function clique () {
-    bg = document.getElementById("corpo").style.backgroundColor = "black";
+    document.getElementById("corpo").style.backgroundColor = "black";
+    document.getElementById("randomColor").style.display = "none";
+    bC;
+}
+
+function randomColor () {
+    var random = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById("corpo").style.backgroundColor = "#" + random;
+    c = document.getElementById("color").innerHTML = "#" + random;
+    document.getElementById("randomColor").style.display = "block";
+    document.getElementById("randomColor").innerText = c;
     bC;
 }
 
 function changeColor () {
     color = document.getElementById("color").value;
-    bg = document.getElementById("corpo").style.backgroundColor = color;
+    document.getElementById("corpo").style.backgroundColor = color;
+    document.getElementById("randomColor").style.display = "none";
     bC;
 }
 
 function changeBg () {
     color = document.getElementById("color").value;
-    bg = document.getElementById("corpo").style.backgroundColor = color;
+    document.getElementById("corpo").style.backgroundColor = color;
+    document.getElementById("randomColor").style.display = "none";
     bC;
 }
