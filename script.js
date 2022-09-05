@@ -1,36 +1,38 @@
-var bC = document.getElementById("corpo").style.transition = "background-color 1.0s";
+var bC = document.getElementById("corpo");
+var ranColor = document.getElementById("randomColor");
+
+document.addEventListener("keypress", function(e){
+    if (e.key === "Enter"){
+        const btn = document.querySelector("#change");
+        btn.click();
+    }
+})
 
 function buttonClick (color){
-    document.getElementById("corpo").style.backgroundColor = color;
-    document.getElementById("randomColor").style.display = "none";
-    bC;
+    bC.style.backgroundColor = color;
+    ranColor.style.display = "none";
+    bC.style.transition = "background-color 1.3s";;
 }
 
 function clique () {
-    document.getElementById("corpo").style.backgroundColor = "black";
-    document.getElementById("randomColor").style.display = "none";
-    bC;
+    bC.style.backgroundColor = "black";
+    ranColor.style.display = "none";
+    bC.style.transition = "background-color 1.3s";
 }
 
 function randomColor () {
     var random = Math.floor(Math.random()*16777215).toString(16);
-    document.getElementById("corpo").style.backgroundColor = "#" + random;
+    bC.style.backgroundColor = "#" + random;
     c = document.getElementById("color").innerHTML = "#" + random;
-    document.getElementById("randomColor").style.display = "block";
-    document.getElementById("randomColor").innerText = c.toUpperCase();
-    bC;
-}
-
-function changeColor () {
-    color = document.getElementById("color").value;
-    document.getElementById("corpo").style.backgroundColor = color;
-    document.getElementById("randomColor").style.display = "none";
-    bC;
+    ranColor.style.display = "block";
+    ranColor.innerText = c.toUpperCase();
+    bC.style.transition = "background-color 1.3s";
 }
 
 function changeBg () {
     color = document.getElementById("color").value;
-    document.getElementById("corpo").style.backgroundColor = color;
-    document.getElementById("randomColor").style.display = "none";
-    bC;
+    bC.style.backgroundColor = color;
+    ranColor.style.display = "none";
+    bC.style.transition = "background-color 1.3s";;
+    document.getElementById("color").value = "";
 }
