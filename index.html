@@ -17,14 +17,16 @@
         <button onclick="buttonClick('pink')" class="pink"></button>
         <button onclick="buttonClick('cyan')" class="cyan"></button>
     </header>
-    <div>
-        <button onclick="clique()" id="button">Standard</button>
-        <button onclick="randomColor()" id="button">Random</button>
-        <button onclick="automatic()" id="button">Automatic</button>
-        <p id="randomColor"></p>
-        <input onkeypress="changeColor(13)" type="text" id="color" placeholder="Only English. Ex: Green or #00BFFF">
-        <button onclick="changeBg()" id="change">Change Color</button>
-    </div>
+    <section id="container">
+        <div id="content">
+            <button onclick="clique()" id="button">Standard</button>
+            <button onclick="randomColor()" id="button">Random</button>
+            <button onclick="automatic()" id="button">Automatic</button>
+            <p id="randomColor"></p>
+            <input onkeypress="changeColor(13)" type="text" id="color" placeholder="Only English. Ex: Green or #00BFFF"></br>
+            <button onclick="changeBg()" id="change">Change Color</button>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
