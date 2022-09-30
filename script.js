@@ -32,7 +32,7 @@ function randomColor () {
 }
 
 function automatic () {
-    interval = setInterval(changeAutomatic, 900);
+    interval = setInterval(changeAutomatic, 1300);
 }
 
 function changeAutomatic () {
