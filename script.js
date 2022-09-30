@@ -12,17 +12,19 @@ document.addEventListener("keypress", function(e){
 function buttonClick (color){
     bC.style.backgroundColor = color;
     ranColor.style.display = "none";
-    bC.style.transition = "background-color 1.3s";;
-}
-
-function clique () {
-    bC.style.backgroundColor = "black";
-    ranColor.style.display = "none";
     bC.style.transition = "background-color 1.3s";
     clearInterval(interval);
 }
 
+function clique () {
+    clearInterval(interval);
+    bC.style.backgroundColor = "black";
+    ranColor.style.display = "none";
+    bC.style.transition = "background-color 1.3s";
+}
+
 function randomColor () {
+    clearInterval(interval);
     var random = Math.floor(Math.random()*16777215).toString(16);
     bC.style.backgroundColor = "#" + random;
     let c = document.getElementById("color").innerHTML = "#" + random;
@@ -32,14 +34,15 @@ function randomColor () {
 }
 
 function automatic () {
-    interval = setInterval(changeAutomatic, 1300);
+    interval = setInterval(changeAutomatic, 900);
 }
 
 function changeAutomatic () {
-    let color = bC.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    bC.style.backgroundColor = color;
+    ranColor.style.display = "block";
     ranColor.innerText = color.toUpperCase();
     bC.style.transition = "background-color 1.3s";
-
 }
 
 function changeBg () {
