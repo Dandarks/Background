@@ -104,13 +104,6 @@ input {
     margin-top: -5px;
 }
 
-@media screen and (max-width: 500px){
-    div {
-        padding: 20px;
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 425px) {
     header button:hover {
         background-color: initial;
@@ -119,10 +112,18 @@ input {
     div button:hover {
         background-color: white;
     }
+
+    input {
+        max-width: 400px;
+    }
 }
 
-@media screen and (max-width: 320px) {
-    div button {
+@media screen and (max-width: 375px) {
+    section button {
         padding: 12px;
+    }
+
+    input {
+        max-width: 300px;
     }
 }
