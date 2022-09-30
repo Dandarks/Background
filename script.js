@@ -2,6 +2,7 @@ var bC = document.getElementById("corpo");
 var ranColor = document.getElementById("randomColor");
 var interval;
 
+
 document.addEventListener("keypress", function(e){
     if (e.key === "Enter"){
         const btn = document.querySelector("#change");
@@ -34,7 +35,7 @@ function randomColor () {
 }
 
 function automatic () {
-    interval = setInterval(changeAutomatic, 900);
+    interval = setInterval(changeAutomatic, 100);
 }
 
 function changeAutomatic () {
@@ -42,10 +43,11 @@ function changeAutomatic () {
     bC.style.backgroundColor = color;
     ranColor.style.display = "block";
     ranColor.innerText = color.toUpperCase();
-    bC.style.transition = "background-color 1.3s";
+    bC.style.transition = "background-color 1s";
 }
 
 function changeBg () {
+    clearInterval(interval);
     color = document.getElementById("color").value;
     bC.style.backgroundColor = color;
     ranColor.style.display = "none";
