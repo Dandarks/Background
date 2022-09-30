@@ -35,7 +35,7 @@ function randomColor () {
 }
 
 function automatic () {
-    interval = setInterval(changeAutomatic, 100);
+    interval = setInterval(changeAutomatic, 1500);
 }
 
 function changeAutomatic () {
@@ -43,7 +43,7 @@ function changeAutomatic () {
     bC.style.backgroundColor = color;
     ranColor.style.display = "block";
     ranColor.innerText = color.toUpperCase();
-    bC.style.transition = "background-color 1s";
+    bC.style.transition = "background-color 1.3s";
 }
 
 function changeBg () {
